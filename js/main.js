@@ -62,7 +62,8 @@
 		
 		//Image Background 
 		$(".image-background").backstretch("images/image-bg.jpg");
-		
+
+    	document.querySelectorAll(".backstretch img")[0].setAttribute('data-at2x', "images/image-bg.jpg");
 		
 		
 		//Parallax Background 
@@ -241,13 +242,14 @@
 				if ($(".contact-form :input").hasClass("input-error")) {
 					return false;
 				} else {
-				
+                    document.getElementById("gotcha").value = btoa(emailField.val());
+                    formData = contactForm.serialize();
 					clearTimeout(form_msg_timeout);
-					
+
 					$.post(formAction, formData, function(data) {
 						formSubmitMessage.text(data);
 
-						requiredFields.val("");
+                        document.getElementById("contact-form").reset();
 
 						form_msg_timeout = setTimeout(function() {
 							formSubmitMessage.slideUp();

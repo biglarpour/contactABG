@@ -21,7 +21,6 @@
     <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
     <link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/vegas.min.css" />
     <link rel="stylesheet" type="text/css" href="css/menu.css" />
     <link rel="stylesheet" type="text/css" href="css/sidebar.css" />
     <!-- Fonts -->
@@ -30,7 +29,6 @@
     <!-- JS -->
     <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/snap.svg-min.js"></script>
-    <script src="../propigator/src/js/util/googleMapComponent.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -110,11 +108,12 @@
                                                         <h3>Do You Have a Question ?</h3>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                                         <!-- contact form -->
-                                                        <form method="post" action="../../send-mail.php" class="contact-form">
+                                                        <form method="post" action="/php/mailer/send-mail.php" id="contact-form" class="contact-form">
                                                             <input type="text" name="name" placeholder="Name" class="required">
                                                             <input type="email" name="email" placeholder="Email address" class="contact-form-email required">
                                                             <input type="text" name="subject" placeholder="Subject" class="contact-form-subject">
                                                             <textarea name="message" placeholder="Message" class="required" rows="7"></textarea>
+                                                            <input type="hidden" name="gotcha" id="gotcha">
                                                             <div class="response-message"></div>
                                                             <button class="border-button" type="submit" id="submit" name="submit">Send Message</button>
                                                         </form><!-- /contact form -->
@@ -126,7 +125,7 @@
                                                                 <li><span>address: </span>Los Angeles</li>
                                                                 <li><span>call us: </span><a href="tel:123456789">123 456 789</a></li>
                                                                 <li><span>Fax: </span><a href="tel:123456789">123 456 789</a></li>
-                                                                <li><span>email: </span><a href="#">support@mail.com</a></li>
+                                                                <li><span>email: </span><a href="mailto:support@contactABG.com">support@contactABG.com</a></li>
                                                             </ul>
                                                             <div id="map1"></div>
                                                         </div>
@@ -157,7 +156,6 @@
 <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
 <script type="text/javascript" src="js/jquery.parallaxify.min.js"></script>
 <script type="text/javascript" src="js/jquery.particleground.min.js"></script>
-<script type="text/javascript" src="js/vegas.min.js"></script>
 <script type="text/javascript" src="js/trianglify.min.js"></script>
 <script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
 <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>

@@ -59,8 +59,7 @@ var myMap = (function(a,b,c){
 	marker = new google.maps.Marker({
 		position: myLatlng,
 		map: map,
-		icon: "http://webnextbd.net/demo/images/marker.png"
-				
+		title: "ABG inc."
 	});
 
 	//Associate the styled map with the MapTypeId and set it to display.
