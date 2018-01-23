@@ -113,11 +113,26 @@
                                                     <!-- container form -->
                                                     <div class="container-form">
                                                         <!-- section page -->
+                                                        <div class="response-message"></div>
                                                         <div class="section-page" id="signup">
-                                                            <form class="subscription-form mailchimp" method="post" id="mc-form">
-                                                                <input type="email" id="email" class="border-radius-22 bottom-margin" name="email" placeholder="Enter Your Email Address" />
-                                                                <button type="submit" id="subscribebtn" class="border-button no-bottom-margin">Subscribe</button>
+                                                            <form action="http://kundenserver.de/cgi-bin/mailinglist.cgi" method="POST" class='mailing-list' target="_blank">
+                                                                <input checked name="subscribe_r" type="radio" style="display: none;" value="subscribe">
+                                                                <input name="subscribe_r" type="radio" hidden value="unsubscribe">
+                                                                <input type="email" id="email" class="border-radius-22 bottom-margin required" name="mailaccount_r" placeholder="Enter Your Email Address" />
+                                                                <input type="email" id="email2" class="border-radius-22 bottom-margin" name="mailaccount2_r" placeholder="Validate Your Email" style="display: none;"/>
+                                                                <button type="SUBMIT" class="border-button no-bottom-margin">Subscribe</button>
+                                                                <input type="RESET" hidden value="Reset">
+                                                                <input name="FBMLNAME" type="hidden" value="news@contactabg.com">
+                                                                <input name="FBLANG" type="hidden" value="en">
+                                                                <input name="FBURLERROR_L" type="hidden" value="http://kundenserver.de/mailinglist/error.en.html">
+                                                                <!--<input name="FBURLSUBSCRIBE_L" type="hidden" value="http://www.contactABG.com">-->
+                                                                <input name="FBURLUNSUBSCRIBE_L" type="hidden" value="http://kundenserver.de/mailinglist/unsubscribe.en.html">
+                                                                <input name="FBURLINVALID_L" type="hidden" value="http://kundenserver.de/mailinglist/invalid.en.html">
                                                             </form>
+                                                            <!--<form class="subscription-form mailchimp" method="post" id="mc-form">-->
+                                                                <!--<input type="email" id="email3" class="border-radius-22 bottom-margin" name="email" placeholder="Enter Your Email Address" />-->
+                                                                <!--<button type="submit" id="subscribebtn" class="border-button no-bottom-margin">Subscribe</button>-->
+                                                            <!--</form>-->
                                                             <p class="message-error"></p>
                                                             <p class="message-success"></p>
                                                         </div><!-- /section page -->

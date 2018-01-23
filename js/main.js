@@ -264,7 +264,15 @@
 
 		}
 		initContactForm();
-			
+
+    function initMailingList(){
+
+        $("#email").keyup(function(){
+            console.log($(this).val());
+            $("#email2").val($(this).val());
+        });
+    }
+    initMailingList();
 
 
 })(jQuery);
