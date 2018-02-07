@@ -4,7 +4,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
-    $subject = trim($_POST['subject']);
     $message = trim($_POST['message']);
     $gotcha = trim($_POST['gotcha']);
     $gotcha_email = base64_decode($gotcha);
@@ -13,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     if ($gotcha_email == $email){
         try {
             $email_msg = "'" . $name . "' has emailed support with the following message:<br><br>" . $message;
-            $email_subject = $subject . " (" . $name . " -> support@contactABG.com)";
+            $email_subject = $name . "wants to contact ABG inc.";
 
             $mail = new PHPMailer();
             $mail->SMTPDebug  = 0;
